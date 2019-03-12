@@ -1,0 +1,179 @@
+/* LESS Document */
+
+/* Fonts & Variables 
+-------------------------------------------------- */
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300);
+@red: #cc4141;
+@darkred: #aa4141;
+@lightgrey: #f5f5f5;
+@grey: #ccc;
+@darkgrey: #777;
+@black: #222;
+@white: #fff;
+@green: #8dc63f;
+
+/* General styles
+-------------------------------------------------- */
+body {padding-top: 75px; font-family: 'Open Sans', sans-serif; color:@black; height: 100%;}
+a, a:visited {color:@black; text-decoration: underline; text-decoration: none; text-underline-position: under; transition: color 0.25s ease;}
+.btn, .navbar-nav>li>a, #branding a {text-decoration:none;}
+a:hover, a:active {color:@red; text-decoration: none;}
+#branding h1 {margin-top: 0; margin-bottom: 0; line-height: 60px; font-weight: 100;}
+#branding p {margin-left:20px; line-height: 60px; font-size: 1.25rem;}
+    #branding p:before {content:"\003c"; padding-right: 20px; color:@grey;}
+#search {line-height: 60px;}
+#rules {padding: 25px 0px;}
+section {margin-bottom: 30px;}
+ol ol, ol li ol {list-style: lower-alpha;}
+img { max-width: 100%;}
+
+h3.breadcrumb {
+    background-color: @darkgrey; border-radius:6px 6px 0 0; color:@lightgrey; padding:10px 20px; margin: 0; font-size:1.25rem; text-transform: uppercase; letter-spacing: 2px;
+    span, i {
+    opacity: .5;}
+    a {text-decoration: none; color:@lightgrey;}
+    a:hover{color:@white;}
+}
+
+/* Bootstrap correction 
+-------------------------------------------------- */
+.btn-primary {
+    background-color: @red;
+    border-color: @darkred;
+}
+
+.btn-primary:hover {
+    background-color: @darkred;
+    border-color: @darkred;
+}
+
+/* Main Index
+-------------------------------------------------- */
+
+.rule-index {margin-bottom: 40px;
+    section {padding: 0px; display:flow-root; box-shadow: 0 5px 40px rgba(0, 0, 0, 0.25); border-radius:6px; background-color:@lightgrey;}
+     ol {
+    font-size:1.5rem; 
+    padding-top: 10px; 
+    padding-bottom: 10px; 
+    background-color: @lightgrey; 
+    color: @darkgrey;
+    list-style: upper-alpha;
+    
+        li {padding: 10px 20px 10px 10px;
+            :last-child{
+                border-radius:0 0 6px 6px;
+            }
+            span {float: right; opacity: .5; color:@darkgrey;}
+        }
+    }
+}
+
+/* Category List
+-------------------------------------------------- */
+
+.toggle-btn {background-color:@white;}
+
+.rule-category {
+    box-shadow: 0 5px 40px rgba(0, 0, 0, 0.25); border-radius:6px; margin-bottom: 40px;
+    ol{
+        padding-inline-start: 20px;
+    }
+    h2.cat-title {
+        background-color: @lightgrey; padding:20px 20px; margin: 0; font-size:2rem;
+        span {letter-spacing: normal; color:@darkgrey;}
+    }
+}
+
+.rule-category .description {background-color: @lightgrey; padding: 0 20px 10px;}
+.rule-category .how-to-view {padding:10px; margin: 10px auto 40px; border-bottom:1px solid @lightgrey;}
+
+.rule-category ol li a.rule-title {color:@red; font-size: 30px; font-weight: 100; text-decoration: none;}
+
+
+/* Single Rule
+-------------------------------------------------- */
+
+.rule-single {box-shadow: 0 5px 40px rgba(0, 0, 0, 0.25); border-radius:6px; }
+.rule-content{padding:0 20px 20px;
+        h1 {color:@red; font-weight: 100;} 
+        h3, h4{color:@darkgrey;} 
+        a {text-decoration: underline; text-decoration-color: @grey; transition: color 0.25s ease;}
+        a:hover {text-decoration-color: @red;}
+        .greybox {display: block;
+            padding: 9.5px;
+            margin: 10px 0;
+            background-color: @lightgrey;
+            border: 1px solid @grey;
+            border-radius: 4px;}
+        figure {background-color: @lightgrey; padding: 4px; margin-bottom: 20px;
+            img{}
+            figcaption {margin: 10px 10px 6px; font-weight: bold;}
+            figcaption.bad:before {content: "\f2d3 "; font-family: FontAwesome; font-style: normal; font-weight: normal; text-decoration: inherit;
+                color: @red;
+                padding-right: 0.5rem;}
+             figcaption.good:before {content: "\f14a "; font-family: FontAwesome; font-style: normal; font-weight: normal; text-decoration: inherit;
+                color: @green;
+                padding-right: 0.5rem;}
+        }
+        video {background-color: @lightgrey; padding: 4px; margin-bottom: 20px;
+        pre, code {display: block;
+            padding: 9.5px;
+            margin: 10px 0;
+            word-break: break-all;
+            word-wrap: break-word;
+            background-color: @lightgrey;
+            border: 1px solid @grey;
+            border-radius: 4px;}
+        pre a, code a {text-decoration: none;}
+        }
+}
+
+#more .tags span {background: @darkgrey; color:@white; padding: 3px 6px; font-size:1rem; border-radius: 3px;}
+    
+
+/* Footer styles
+-------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%;
+}
+.footer {
+  width: 100%;
+  background-color: @black;
+  color: @grey;
+
+    p {
+        margin: 20px 0;
+    }
+}
+
+/* Sidebar styles 
+-------------------------------------------------- */
+#sidebar {
+
+    h4{font-size:1.25rem; font-weight: 600; text-transform: uppercase;}
+    
+    .testimonial { 
+        border:1px @grey solid;
+        overflow: auto;
+        margin-bottom: 2rem;
+        border-radius: 6px;
+
+        .avatar img {
+            max-width: 100px;
+            border-radius: 50%!important;
+            margin-top: 30px;
+        }
+
+        blockquote {
+            font-style: italic;
+            border-left: 0;
+            font-size:small;
+        }
+    }
+    
+    .get-started-icon {font-size:2.75rem; color:@red; margin-right:10px;}
+    .get-started-text {padding-top: 10px;}
+}
