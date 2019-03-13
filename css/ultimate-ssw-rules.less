@@ -16,9 +16,9 @@
 /* General styles
 -------------------------------------------------- */
 body {padding-top: 75px; font-family: 'Open Sans', sans-serif; color:@black; height: 100%;}
-a, a:visited {color:@black; text-decoration: underline; text-decoration: none; text-underline-position: under; transition: color 0.25s ease;}
+a, a:visited {color:@black; text-decoration: none; transition: color 0.25s ease;}
 .btn, .navbar-nav>li>a, #branding a {text-decoration:none;}
-a:hover, a:active {color:@red; text-decoration: none;}
+a:hover, a:active {color:@red; border-bottom:1px solid @red; text-decoration: none;}
 #branding h1 {margin-top: 0; margin-bottom: 0; line-height: 60px; font-weight: 100;}
 #branding p {margin-left:20px; line-height: 60px; font-size: 1.25rem;}
     #branding p:before {content:"\003c"; padding-right: 20px; color:@grey;}
@@ -29,11 +29,11 @@ ol ol, ol li ol {list-style: lower-alpha;}
 img { max-width: 100%;}
 
 h3.breadcrumb {
-    background-color: @darkgrey; border-radius:6px 6px 0 0; color:@lightgrey; padding:10px 20px; margin: 0; font-size:1.25rem; text-transform: uppercase; letter-spacing: 2px;
+    background-color: @darkgrey; border-radius:6px 6px 0 0; color:@grey; padding:10px 20px; margin: 0; font-size:1.25rem; text-transform: uppercase; letter-spacing: 2px;
     span, i {
     opacity: .5;}
-    a {text-decoration: none; color:@lightgrey;}
-    a:hover{color:@white;}
+    a {color:@white;}
+    a:hover{color:@lightgrey; border-color:@lightgrey;}
 }
 
 /* Bootstrap correction 
@@ -56,7 +56,6 @@ h3.breadcrumb {
      ol {
     font-size:1.5rem; 
     padding-top: 10px; 
-    padding-bottom: 10px; 
     background-color: @lightgrey; 
     color: @darkgrey;
     list-style: upper-alpha;
@@ -76,38 +75,41 @@ h3.breadcrumb {
 .toggle-btn {background-color:@white;}
 
 .rule-category {
-    box-shadow: 0 5px 40px rgba(0, 0, 0, 0.25); border-radius:6px; margin-bottom: 40px;
+    box-shadow: 0 5px 40px rgba(0, 0, 0, 0.25); border-radius:6px; margin-bottom: 40px; padding-bottom: 20px;
     ol{
         padding-inline-start: 20px;
     }
     h2.cat-title {
         background-color: @lightgrey; padding:20px 20px; margin: 0; font-size:2rem;
-        span {letter-spacing: normal; color:@darkgrey;}
+        span {letter-spacing: normal; opacity: .5;}
     }
 }
 
 .rule-category .description {background-color: @lightgrey; padding: 0 20px 10px;}
-.rule-category .how-to-view {padding:10px; margin: 10px auto 40px; border-bottom:1px solid @lightgrey;}
+.rule-category .how-to-view {padding:10px; margin: 10px auto 20px; border-bottom:1px solid @lightgrey;}
 
-.rule-category ol li a.rule-title {color:@red; font-size: 30px; font-weight: 100; text-decoration: none;}
-
+.rule-content-title{padding:0 20px;
+    h1, a{color:@red; font-size: 30px; font-weight: 100;}
+}
 
 /* Single Rule
 -------------------------------------------------- */
+
+.rule-category h1 {color:@red; font-size: 30px; font-weight: 100;}
 
 .rule-single {box-shadow: 0 5px 40px rgba(0, 0, 0, 0.25); border-radius:6px; }
 .rule-content{padding:0 20px 20px;
         h1 {color:@red; font-weight: 100;} 
         h3, h4{color:@darkgrey;} 
-        a {text-decoration: underline; text-decoration-color: @grey; transition: color 0.25s ease;}
-        a:hover {text-decoration-color: @red;}
+        a {border-bottom:1px solid @grey; transition: color 0.25s ease;}
+        a:hover {border-bottom-color: @red;}
         .greybox {display: block;
             padding: 9.5px;
             margin: 10px 0;
             background-color: @lightgrey;
             border: 1px solid @grey;
             border-radius: 4px;}
-        figure {background-color: @lightgrey; padding: 4px; margin-bottom: 20px;
+        figure {background-color: @lightgrey; padding: 4px; margin-bottom: 20px; display: inline-block;
             img{}
             figcaption {margin: 10px 10px 6px; font-weight: bold;}
             figcaption.bad:before {content: "\f2d3 "; font-family: FontAwesome; font-style: normal; font-weight: normal; text-decoration: inherit;
@@ -118,7 +120,7 @@ h3.breadcrumb {
                 padding-right: 0.5rem;}
         }
         video {background-color: @lightgrey; padding: 4px; margin-bottom: 20px;
-        pre, code {display: block;
+        pre {display: block;
             padding: 9.5px;
             margin: 10px 0;
             word-break: break-all;
@@ -126,12 +128,18 @@ h3.breadcrumb {
             background-color: @lightgrey;
             border: 1px solid @grey;
             border-radius: 4px;}
-        pre a, code a {text-decoration: none;}
+        pre a {text-decoration: none;}
         }
 }
 
 #more .tags span {background: @darkgrey; color:@white; padding: 3px 6px; font-size:1rem; border-radius: 3px;}
     
+
+/* Responsiveness
+-------------------------------------------------- */
+.rule-content {
+    .greybox {width:50%;}
+}
 
 /* Footer styles
 -------------------------------------------------- */
@@ -154,8 +162,9 @@ html {
 #sidebar {
 
     h4{font-size:1.25rem; font-weight: 600; text-transform: uppercase;}
-    
-    .testimonial { 
+        a {border-bottom:1px solid @grey; transition: color 0.25s ease;}
+        a:hover {border-bottom-color: @red;}
+        .testimonial { 
         border:1px @grey solid;
         overflow: auto;
         margin-bottom: 2rem;
