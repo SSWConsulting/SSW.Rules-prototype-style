@@ -106,19 +106,21 @@ h3.breadcrumb a:hover {
   font-size: 1.5rem;
   padding-top: 10px;
   background-color: #f5f5f5;
-  color: #777;
+  color: #ccc;
   list-style: upper-alpha;
 }
+.rule-index ol :before {
+  opacity: .5;
+}
 .rule-index ol li {
-  padding: 10px 20px 10px 10px;
+  padding: 10px 20px 10px 5px;
 }
 .rule-index ol li :last-child {
   border-radius: 0 0 6px 6px;
 }
 .rule-index ol li span {
   float: right;
-  opacity: .5;
-  color: #777;
+  color: #ccc;
 }
 /* Category List
 -------------------------------------------------- */
@@ -138,11 +140,10 @@ h3.breadcrumb a:hover {
   background-color: #f5f5f5;
   padding: 20px 20px;
   margin: 0;
-  font-size: 2rem;
 }
 .rule-category h2.cat-title span {
   letter-spacing: normal;
-  opacity: .5;
+  color: #ccc;
 }
 .rule-category .description {
   background-color: #f5f5f5;
@@ -154,7 +155,7 @@ h3.breadcrumb a:hover {
   border-bottom: 1px solid #f5f5f5;
 }
 .rule-content-title {
-  padding: 0 20px;
+  padding: 0 40px;
 }
 .rule-content-title h1,
 .rule-content-title a {
@@ -168,10 +169,6 @@ h3.breadcrumb a:hover {
   color: #cc4141;
   font-size: 30px;
   font-weight: 100;
-}
-.rule-single {
-  box-shadow: 0 5px 40px rgba(0, 0, 0, 0.25);
-  border-radius: 6px;
 }
 .rule-content {
   padding: 0 20px 20px;
@@ -227,6 +224,15 @@ h3.breadcrumb a:hover {
   color: #8dc63f;
   padding-right: 0.5rem;
 }
+.rule-content figure figcaption.ok:before {
+  content: "\f11a ";
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  text-decoration: inherit;
+  color: #777;
+  padding-right: 0.5rem;
+}
 .rule-content video {
   background-color: #f5f5f5;
   padding: 4px;
@@ -245,17 +251,72 @@ h3.breadcrumb a:hover {
 .rule-content video pre a {
   text-decoration: none;
 }
+.rule-single {
+  box-shadow: 0 5px 40px rgba(0, 0, 0, 0.25);
+  border-radius: 6px;
+}
+#more {
+  overflow: auto;
+  text-align: center;
+  margin-top: 60px;
+  border-top: 1px solid #f5f5f5;
+}
+#more .acknowledgements {
+  margin-top: 40px;
+}
+#more .acknowledgements .avatar img {
+  max-width: 50px;
+  border-radius: 50%!important;
+  margin-top: 6px;
+}
+#more .acknowledgements .avatar a,
+#more .acknowledgements .avatar a:hover {
+  border-bottom: none;
+}
+#more .tags {
+  margin-top: 40px;
+}
 #more .tags span {
-  background: #777;
+  background-color: #777;
   color: #fff;
   padding: 3px 6px;
-  font-size: 1rem;
+  margin: 6px 0;
+  font-size: 12px;
   border-radius: 3px;
+  display: inline-block;
+  cursor: pointer;
+}
+#more .tags span:hover {
+  background-color: #222;
+}
+#more .likes {
+  margin-top: 40px;
+  color: #777;
+}
+#more .likes span {
+  margin: 6px 0;
+  display: inline-block;
+  padding: 0 20px;
+}
+#more .likes span .bad,
+#more .likes span .good {
+  font-size: 2rem;
+  transition: color 0.25s ease;
+  cursor: pointer;
+  padding: 0 3px;
+}
+#more .likes span .good:hover {
+  color: #8dc63f;
+}
+#more .likes span .bad:hover {
+  color: #cc4141;
 }
 /* Responsiveness
 -------------------------------------------------- */
-.rule-content .greybox {
-  width: 50%;
+@media (min-width: 768px) {
+  .rule-content {
+    padding: 0 40px 40px;
+  }
 }
 /* Footer styles
 -------------------------------------------------- */

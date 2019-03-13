@@ -54,17 +54,17 @@ h3.breadcrumb {
 .rule-index {margin-bottom: 40px;
     section {padding: 0px; display:flow-root; box-shadow: 0 5px 40px rgba(0, 0, 0, 0.25); border-radius:6px; background-color:@lightgrey;}
      ol {
-    font-size:1.5rem; 
-    padding-top: 10px; 
-    background-color: @lightgrey; 
-    color: @darkgrey;
-    list-style: upper-alpha;
-    
-        li {padding: 10px 20px 10px 10px;
+        font-size:1.5rem; 
+        padding-top: 10px; 
+        background-color: @lightgrey; 
+        color: @grey;
+        list-style: upper-alpha;
+        :before {opacity:.5;}
+        li {padding: 10px 20px 10px 5px;
             :last-child{
                 border-radius:0 0 6px 6px;
             }
-            span {float: right; opacity: .5; color:@darkgrey;}
+            span {float: right; color:@grey;}
         }
     }
 }
@@ -80,15 +80,15 @@ h3.breadcrumb {
         padding-inline-start: 20px;
     }
     h2.cat-title {
-        background-color: @lightgrey; padding:20px 20px; margin: 0; font-size:2rem;
-        span {letter-spacing: normal; opacity: .5;}
+        background-color: @lightgrey; padding:20px 20px; margin: 0;
+        span {letter-spacing: normal; color:@grey;}
     }
 }
 
 .rule-category .description {background-color: @lightgrey; padding: 0 20px 10px;}
 .rule-category .how-to-view {padding:10px; margin: 10px auto 20px; border-bottom:1px solid @lightgrey;}
 
-.rule-content-title{padding:0 20px;
+.rule-content-title{padding:0 40px;
     h1, a{color:@red; font-size: 30px; font-weight: 100;}
 }
 
@@ -97,7 +97,6 @@ h3.breadcrumb {
 
 .rule-category h1 {color:@red; font-size: 30px; font-weight: 100;}
 
-.rule-single {box-shadow: 0 5px 40px rgba(0, 0, 0, 0.25); border-radius:6px; }
 .rule-content{padding:0 20px 20px;
         h1 {color:@red; font-weight: 100;} 
         h3, h4{color:@darkgrey;} 
@@ -115,8 +114,11 @@ h3.breadcrumb {
             figcaption.bad:before {content: "\f2d3 "; font-family: FontAwesome; font-style: normal; font-weight: normal; text-decoration: inherit;
                 color: @red;
                 padding-right: 0.5rem;}
-             figcaption.good:before {content: "\f14a "; font-family: FontAwesome; font-style: normal; font-weight: normal; text-decoration: inherit;
+            figcaption.good:before {content: "\f14a "; font-family: FontAwesome; font-style: normal; font-weight: normal; text-decoration: inherit;
                 color: @green;
+                padding-right: 0.5rem;}
+            figcaption.ok:before{content: "\f11a "; font-family: FontAwesome; font-style: normal; font-weight: normal; text-decoration: inherit;
+                color: @darkgrey;
                 padding-right: 0.5rem;}
         }
         video {background-color: @lightgrey; padding: 4px; margin-bottom: 20px;
@@ -132,13 +134,42 @@ h3.breadcrumb {
         }
 }
 
-#more .tags span {background: @darkgrey; color:@white; padding: 3px 6px; font-size:1rem; border-radius: 3px;}
+.rule-single {box-shadow: 0 5px 40px rgba(0, 0, 0, 0.25); border-radius:6px;}
     
+#more {
+    overflow: auto; text-align: center; margin-top: 60px; border-top:1px solid @lightgrey;
+
+    .acknowledgements {
+        margin-top: 40px;
+        .avatar {
+            img {
+                max-width: 50px;
+                border-radius: 50%!important;
+                margin-top: 6px;
+            }
+            a, a:hover {border-bottom: none;}
+        }
+    }
+    .tags {
+        margin-top: 40px;
+        span {background-color: @darkgrey; color:@white; padding: 3px 6px; margin: 6px 0; font-size:12px; border-radius: 3px; display: inline-block; cursor: pointer;}
+        span:hover {background-color: @black;}
+    }
+    .likes {margin-top: 40px; color:@darkgrey;
+        span {margin: 6px 0; display: inline-block; padding: 0 20px;
+            .bad, .good {font-size:2rem; transition: color 0.25s ease; cursor: pointer; padding: 0 3px;}
+            .good:hover {color:@green;}
+            .bad:hover {color:@red;}
+        }
+    }
+}
 
 /* Responsiveness
 -------------------------------------------------- */
-.rule-content {
-    .greybox {width:50%;}
+@media (min-width: 768px) {
+    .rule-content {
+        padding:0 40px 40px;
+    }
 }
 
 /* Footer styles
