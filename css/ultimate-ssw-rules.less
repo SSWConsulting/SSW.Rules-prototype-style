@@ -12,6 +12,7 @@
 @black: #222;
 @white: #fff;
 @green: #8dc63f;
+@blue: #448CCB;
 
 /* General styles
 -------------------------------------------------- */
@@ -103,12 +104,14 @@ h3.breadcrumb {
         a {border-bottom:1px solid @grey; transition: color 0.25s ease;}
         a:hover {border-bottom-color: @red;}
         .greybox {display: block;
-            padding: 9.5px;
-            margin: 10px 0;
+            padding: 10px;
+            margin: 0;
             background-color: @lightgrey;
-            border: 1px solid @grey;
-            border-radius: 4px;}
-        figure {background-color: @lightgrey; padding: 4px; margin-bottom: 20px; display: inline-block;
+            border: 1px solid @grey;}
+        ul {list-style-type: square;
+            ul, li ul {list-style-type: circle;}
+        }
+        figure {background-color: @lightgrey; padding: 4px; margin-bottom: 20px; display: table;
             img{}
             figcaption {margin: 10px 10px 6px; font-weight: bold;}
             figcaption.bad:before {content: "\f2d3 "; font-family: FontAwesome; font-style: normal; font-weight: normal; text-decoration: inherit;
@@ -128,10 +131,35 @@ h3.breadcrumb {
             word-break: break-all;
             word-wrap: break-word;
             background-color: @lightgrey;
-            border: 1px solid @grey;
-            border-radius: 4px;}
+            border: 1px solid @grey;}
         pre a {text-decoration: none;}
         }
+        .highlight{background-color: yellow;}
+            p.highlight, div.highlight {display: table;
+                padding: 10px;
+                margin: 0 0 20px;
+                background-color: yellow;
+                border: 1px solid @grey;}
+    
+        .todo{color: red; font-weight: bold;text-transform: uppercase;}
+            p.todo, div.todo {display: table;
+                padding: 10px;
+                margin: 0 0 20px;
+                border: 1px solid red;}
+    
+        .info:before{content: "\f05a ";
+                font-family: FontAwesome;
+                font-size: 3rem;
+                font-weight: normal;
+                text-decoration: inherit;
+                color: @red;
+                padding-right: 1rem;
+                float: left;
+                line-height: normal;}
+        .info {display: table; padding: 10px; margin: 0 0 20px; border: 1px solid @grey;}
+    
+        .china:before{content: url(https://rules.ssw.com.au/PublishingImages/china-flag-icon.png); padding-right: 1rem; float: left;}
+        .china{display: table; padding: 10px; margin: 0 0 20px; border: 1px solid @grey;}
 }
 
 .rule-single {box-shadow: 0 5px 40px rgba(0, 0, 0, 0.25); border-radius:6px;}
@@ -169,6 +197,7 @@ h3.breadcrumb {
 @media (min-width: 768px) {
     .rule-content {
         padding:0 40px 40px;
+        .greybox {min-width: 450px;}
     }
 }
 
