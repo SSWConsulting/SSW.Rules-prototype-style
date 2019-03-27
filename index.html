@@ -5,14 +5,11 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-        <title>SSW Rules - Index - Ultimate Rules Template v1</title>
-
-        <!-- Bootstrap -->
-        <link href="css/bootstrap.min.css" rel="stylesheet">
-            
+        <title>SSW Rules - Index - Ultimate Rules Template v1</title>            
+        
+        <link href="scss/sswrules.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.0/css/all.css" integrity="sha384-Mmxa0mLqhmOeaE8vgOSbKacftZcsNYDjQzuCOm6D02luYSzBG8vpaOykv9lFQ51Y" crossorigin="anonymous">
         <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,700" rel="stylesheet">
-        <link href="css/ultimate-ssw-rules.css" rel="stylesheet">
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
 
         <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -23,7 +20,7 @@
     </head>
     <body>
         
-        <nav class="navbar navbar-inverse navbar-fixed-top">
+        <nav class="navbar navbar-inverse navbar-fixed-top d-none">
             <div class="container">
                 <div class="navbar-header">
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -47,11 +44,11 @@
             </div>
         </nav>
         
-        <div class="container">
-            <div id="branding" class="pull-left">
-                <a href="index.html"><h1><img src="https://www.ssw.com.au/SSW/images/Raven/SSWLogo.png" alt="Microsoft Experts" class="pull-left"> Rules</h1></a>
+        <div class="container clearfix my-3">
+            <div id="branding" class="float-left">
+                <a href="index.html"><h1><img src="https://www.ssw.com.au/SSW/images/Raven/SSWLogo.svg" alt="Microsoft Experts" class="float-left pr-2"> Rules</h1></a>
             </div>
-            <div id="search" class="pull-right">
+            <div id="search" class="float-right d-none">
                 <form class="form-inline">
                     <input class="form-control" type="text" placeholder="Search" aria-label="Search"> 
                     <button class="btn btn-primary" type="submit"><i class="fas fa-search"></i></button>
@@ -60,51 +57,43 @@
         </div>
         
         <div class="container" id="rules">
-            
-            <!--<div class="jumbotron">
-                <div class="container">
-                    <h1>Hello, world!</h1>
-                    <p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
-                    <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more »</a></p>
-                </div>
-            </div>-->
-
+        <div class="row">
             <div class="col-md-9">
                 <div class="rule-index no-gutters">
-                    <section>
-                    <h3 class="breadcrumb">Management <span class="pull-right">120</span></h3>
-                    <ol>
-                        <li><a href="category.html">Successful Projects</a><span class="hidden-xs">12</span></li>
-                        <li><a href="#">Successful Sales and Account Management</a><span class="hidden-xs">10</span></li>
-                        <li><a href="#">Better Scrum using TFS</a><span class="hidden-xs">8</span></li>
-                        <li><a href="#">Better Specification Reviews</a><span class="hidden-xs">9</span></li>
-                        <li><a href="#">Better Product Owners</a><span class="hidden-xs">11</span></li>
-                        <li><a href="#">Better Software Consultants - Dealing with Clients</a><span class="hidden-xs">7</span></li>
-                        <li><a href="#">Better Software Consultants - Working in a Team</a><span class="hidden-xs">12</span></li>
+                    <section class="mb-5">
+                    <h6 class="breadcrumb">Management <span>120</span></h6>
+                    <ol class="pt-3">
+                        <li><a href="category.html">Successful Projects</a><span class="d-none d-md-block">12</span></li>
+                        <li><a href="#">Successful Sales and Account Management</a><span class="d-none d-md-block">10</span></li>
+                        <li><a href="#">Better Scrum using TFS</a><span class="d-none d-md-block">8</span></li>
+                        <li><a href="#">Better Specification Reviews</a><span class="d-none d-md-block">9</span></li>
+                        <li><a href="#">Better Product Owners</a><span class="d-none d-md-block">11</span></li>
+                        <li><a href="#">Better Software Consultants - Dealing with Clients</a><span class="d-none d-md-block">7</span></li>
+                        <li><a href="#">Better Software Consultants - Working in a Team</a><span class="d-none d-md-block">12</span></li>
                     </ol>
                     </section>
                     
-                    <section>
-                    <h3 class="breadcrumb">Communication <span class="pull-right">75</span></h3>
-                    <ol>
-                        <li><a href="#">Communication</a><span class="hidden-xs">12</span></li>
-                        <li><a href="#">Giving and Taking Feedback</a><span class="hidden-xs">10</span></li>
-                        <li><a href="#">Better Emails</a><span class="hidden-xs">8</span></li>
-                        <li><a href="#">Better Calendars</a><span class="hidden-xs">9</span></li>
-                        <li><a href="#">Better Inbox Managements</a><span class="hidden-xs">11</span></li>
-                        <li><a href="#">Better Outlook</a><span class="hidden-xs">7</span></li>
-                        <li><a href="#">Better IM</a><span class="hidden-xs">12</span></li>
+                    <section class="mb-5">
+                    <h6 class="breadcrumb">Communication <span>75</span></h6>
+                    <ol class="pt-3">
+                        <li><a href="#">Communication</a><span class="d-none d-md-block">12</span></li>
+                        <li><a href="#">Giving and Taking Feedback</a><span class="d-none d-md-block">10</span></li>
+                        <li><a href="#">Better Emails</a><span class="d-none d-md-block">8</span></li>
+                        <li><a href="#">Better Calendars</a><span class="d-none d-md-block">9</span></li>
+                        <li><a href="#">Better Inbox Managements</a><span class="d-none d-md-block">11</span></li>
+                        <li><a href="#">Better Outlook</a><span class="d-none d-md-block">7</span></li>
+                        <li><a href="#">Better IM</a><span class="d-none d-md-block">12</span></li>
                     </ol>
                     </section>
                     
-                    <section>
-                    <h3 class="breadcrumb">Another Group of Rules <span class="pull-right">75</span></h3>
-                    <ol>
-                        <li><a href="#">Successful Riding a Bike</a><span class="hidden-xs">12</span></li>
-                        <li><a href="#">Better Something</a><span class="hidden-xs">8</span></li>
-                        <li><a href="#">Better Something Else</a><span class="hidden-xs">9</span></li>
-                        <li><a href="#">Better That Other Thing</a><span class="hidden-xs">11</span></li>
-                        <li><a href="#">Better Flying to the Moon</a><span class="hidden-xs">7</span></li>
+                    <section class="mb-5">
+                    <h6 class="breadcrumb">Another Group of Rules <span>75</span></h6>
+                    <ol class="pt-3">
+                        <li><a href="#">Successful Riding a Bike</a><span class="d-none d-md-block">12</span></li>
+                        <li><a href="#">Better Something</a><span class="d-none d-md-block">8</span></li>
+                        <li><a href="#">Better Something Else</a><span class="d-none d-md-block">9</span></li>
+                        <li><a href="#">Better That Other Thing</a><span class="d-none d-md-block">11</span></li>
+                        <li><a href="#">Better Flying to the Moon</a><span class="d-none d-md-block">7</span></li>
                     </ol>
                     </section>
                 </div>
@@ -122,10 +111,10 @@
                 
                 <section>
                     <h4>Help and improve our rules</h4>
-                    <div class="testimonial text-center">
+                    <div class="testimonial text-center rounded p-3">
                         <!--Avatar-->
                         <div class="avatar">
-                          <img src="https://adamcogan.com/wp-content/uploads/2018/07/adam-bw.jpg" alt="Adam Cogan" >
+                          <img class="rounded-circle" src="https://adamcogan.com/wp-content/uploads/2018/07/adam-bw.jpg" alt="Adam Cogan" >
                         </div>
                         <!--Content-->
                         <h5>Adam Cogan</h5>
@@ -142,12 +131,12 @@
                     <p>SSW Consulting has over 25 years of experience developing awesome Microsoft solutions that today build on top of AngularJS, Azure, TFS, SharePoint, .NET, Dynamics CRM and SQL Server. With 40+ consultants in 5 countries, we have delivered the best in the business to more than 1,000 clients in 15 countries.</p>
                 </section>
                 <section>
-                    <p class="get-started-icon pull-left"><i class="fas fa-mobile-alt"></i></p>
-                    <p class="get-started-text"><strong>Call us on +61 2 9953 3000 to get a new project started!</strong></p>
+                    <p class="get-started-icon float-left"><i class="fas fa-mobile-alt"></i></p>
+                    <p class="get-started-text">Call us on<br /> <strong>+61 2 9953 3000</strong> to get a new project started!</p>
                 </section>
                 
             </div>
-
+        </div><!-- /.row -->
         </div><!-- /.container -->
         
         <footer class="footer">
@@ -157,7 +146,7 @@
                     <p class="small">SYDSP2016P01, powered by SharePoint 2013, running SSW.SharePoint package version 15.31.1003.1001.</p>
                 </div>
                 <div class="col-md-4">
-                    <p class="small text-right">Copyright ©SSW 1990-2018. All Rights Reserved.</p>
+                    <p class="small text-right">Copyright ©SSW 1990-2019. All Rights Reserved.</p>
                 </div>
             </div>
             </div>
@@ -166,6 +155,6 @@
         <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
         <!-- Include all compiled plugins (below), or include individual files as needed -->
-        <script src="js/bootstrap.min.js"></script>
+        <script src="scss/bootstrap/js/bootstrap.js"></script>
     </body>
 </html>

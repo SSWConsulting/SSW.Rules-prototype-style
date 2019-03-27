@@ -1,0 +1,21 @@
+@charset "UTF-8";
+/* CSS Document */
+
+
+@media print {
+    
+    @page {margin: 0.5cm;}
+    
+    a {text-decoration: none !important;}
+    
+    img {max-width: 500px;}
+    
+    .rule-content p a {
+    word-wrap: break-word;
+    }
+    
+    .rule-content p a[href^="http://"]:after, a[href^="https://"]:after {
+    content: " (" attr(href) ")";
+    }
+
+}

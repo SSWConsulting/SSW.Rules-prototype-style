@@ -7,11 +7,9 @@
         <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
         <title>SSW Rules - Rules Category - Ultimate Rules Template v1</title>
 
-        <!-- Bootstrap -->
-        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="scss/sswrules.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.0/css/all.css" integrity="sha384-Mmxa0mLqhmOeaE8vgOSbKacftZcsNYDjQzuCOm6D02luYSzBG8vpaOykv9lFQ51Y" crossorigin="anonymous">
         <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,700" rel="stylesheet">
-        <link href="css/ultimate-ssw-rules.css" rel="stylesheet">
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
 
         <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -22,7 +20,7 @@
     </head>
     <body>
         
-        <nav class="navbar navbar-inverse navbar-fixed-top">
+        <nav class="navbar navbar-inverse navbar-fixed-top d-none">
             <div class="container">
                 <div class="navbar-header">
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -46,11 +44,11 @@
             </div>
         </nav>
         
-        <div class="container">
-            <div id="branding" class="pull-left">
-                <a href="index.html"><h1><img src="https://www.ssw.com.au/SSW/images/Raven/SSWLogo.png" alt="Microsoft Experts" class="pull-left"> Rules</h1></a>
+        <div class="container clearfix my-3">
+            <div id="branding" class="float-left">
+                <a href="index.html"><h1><img src="https://www.ssw.com.au/SSW/images/Raven/SSWLogo.svg" alt="Microsoft Experts" class="float-left pr-2"> Rules</h1></a>
             </div>
-            <div id="search" class="pull-right">
+            <div id="search" class="float-right d-none">
                 <form class="form-inline">
                     <input class="form-control" type="text" placeholder="Search" aria-label="Search"> 
                     <button class="btn btn-primary" type="submit"><i class="fas fa-search"></i></button>
@@ -58,59 +56,51 @@
             </div>
         </div>
 
-        <div class="container" id="rules">
-            
-            <!--<div class="jumbotron">
-                <div class="container">
-                    <h1>Hello, world!</h1>
-                    <p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
-                    <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more »</a></p>
-                </div>
-            </div>-->
+        <div class="container p-0" id="rules">
 
             <div class="col-sm-12">
-                <div class="rule-category">
-                    <section>
-                        <h3 class="breadcrumb"><a href="index.html">Index</a> <i class="fas fa-chevron-left"></i> Management</h3>
-                        <h2 class="cat-title"><span>A.</span> Successful Projects <span class="pull-right rule-count">12</span></h2>
-                        <div class="description">
+                <div class="rule-category rounded">
+                    <section class="mb-5 pb-2">
+                        <h6 class="breadcrumb"><a href="index.html">Index</a> <i class="fas fa-chevron-left"></i> Management</h6>
+                        <h2 class="cat-title  p-3 px-lg-5"><span>A.</span> Successful Projects <span class="rule-count">12</span></h2>
+                        <div class="description px-3 pt-0 pb-3 px-lg-5">
                             <p>This is an optional description of what these bunch of rules are about.</p>
                         </div>
-                        <div class="how-to-view text-center">
-                            <div class="toggle-btns">
-                              <label class="toggle-btn active btn-sm">
-                                <input type="radio" name="options" id="option1" autocomplete="off" checked> Show titles only
-                              </label>
-                              <label class="toggle-btn btn-sm">
-                                <input type="radio" name="options" id="option2" autocomplete="off"> Show everything
-                              </label>
+                        <div class="how-to-view text-center p-4 d-print-none">
+                            <div class="custom-control custom-radio custom-control-inline">
+                                <input type="radio" id="customRadioInline1" name="customRadioInline1" class="custom-control-input">
+                                <label class="custom-control-label" for="customRadioInline1">View titles only</label>
+                            </div>
+                            <div class="custom-control custom-radio custom-control-inline">
+                                <input type="radio" id="customRadioInline2" name="customRadioInline1" class="custom-control-input">
+                                <label class="custom-control-label" for="customRadioInline2">Show everything</label>
                             </div>
                         </div>
-                        <div>
-                            <section class="rule-content-title">
+                        <div class="p-lg-5">
+                            <section class="rule-content-title px-3">
                                  <h1><a class="rule-title" href="rule.html">Do you know how to do something?</a></h1>
                             </section>
-                            <section class="rule-content">
+                            <section class="rule-content px-3 mb-5">
                                 <h2>This is a heading 2</h2>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit <a href="#">this is a link</a> dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                                 <h3>This is a heading 3</h3>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                             </section>
 
-                            <section class="rule-content-title">
+                            <section class="rule-content-title px-3">
                                 <h1><a class="rule-title" href="rule.html">Do you know how to do this other thing?</a></h1>
                             </section>
-                            <section class="rule-content">
+                            <section class="rule-content px-3 mb-5">
                                 <h2>This is a heading 2</h2>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit <a href="#">this is a link</a> dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                                 <h3>This is a heading 3</h3>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                             </section>
                             
-                            <section class="rule-content-title">
+                            <section class="rule-content-title px-3">
                                 <h1><a class="rule-title" href="rule.html">Do you know what is needed to do this?</a></h1>
                             </section>
-                            <section class="rule-content">
+                            <section class="rule-content px-3 mb-5">
                                 <h2>This is a heading 2</h2>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit <a href="#">this is a link</a> dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                                 <h3>This is a heading 3</h3>
@@ -130,7 +120,7 @@
                     <p class="small">SYDSP2016P01, powered by SharePoint 2013, running SSW.SharePoint package version 15.31.1003.1001.</p>
                 </div>
                 <div class="col-md-4">
-                    <p class="small text-right">Copyright ©SSW 1990-2018. All Rights Reserved.</p>
+                    <p class="small text-right">Copyright ©SSW 1990-2019. All Rights Reserved.</p>
                 </div>
             </div>
             </div>
@@ -139,6 +129,6 @@
         <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
         <!-- Include all compiled plugins (below), or include individual files as needed -->
-        <script src="js/bootstrap.min.js"></script>
+        <script src="scss/bootstrap/js/bootstrap.js"></script>
     </body>
 </html>
